@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Marina Bassem – Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap&display=swap" rel="stylesheet">
+<!-- GSAP + ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="grain">
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="progress"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <span class="logo" onclick="showPage('home'); closeMenu();">Marina Bassem</span>
+  <div class="nav-links">
+    <button class="nav-btn" onclick="scrollToWork();">Work</button>
+    <button class="nav-btn" onclick="scrollToProcess();">Process</button>
+    <button class="nav-cta" onclick="showPage('contact');"><span>Say hello →</span></button>
+  </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu();" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-drawer">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+  <div class="drawer-links">
+    <button class="drawer-btn" onclick="scrollToWork(); closeMenu();">Work</button>
+    <button class="drawer-btn" onclick="scrollToProcess(); closeMenu();">Process</button>
+    <button class="drawer-cta" onclick="showPage('contact'); closeMenu();">Say hello →</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE: HOME
+══════════════════════════════════ -->
+<div id="page-home" class="page active" id="main-content">
+  <section class="hero">
+    <svg class="bg-blob bg-blob-1" viewBox="0 0 680 680"><path d="M480 340C480 220 420 100 300 120C180 140 80 240 100 380C120 520 240 600 380 560C520 520 480 460 480 340Z" fill="#A0C4E8"/></svg>
+    <svg class="bg-blob bg-blob-2" viewBox="0 0 400 400"><circle cx="200" cy="200" r="200" fill="#C8E0F8"/></svg>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-label">Product Designer</div>
+        <h1 class="hero-h1" id="hero-heading"></h1>
+        <p class="hero-sub">Senior Product Designer. Problem solver. Handmade artist.</p>
+        <p class="hero-body">4+ years in SaaS &amp; B2B. I design for scale, accessibility, and real human needs.</p>
+        <div class="hero-btns">
+          <a href="https://drive.google.com/file/d/14LkKwLKot_DzwxjakuI-koM1Pcb6VSUD/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-flex;align-items:center;text-decoration:none"><span>View My Resume</span></a>
+          <button class="btn-outline" onclick="showPage('contact')">Or say hello →</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="photo-wrap">
+          <div class="blob-ring2"></div><div class="blob-ring"></div>
+          <div class="photo-circle"><img src="/src/images/hero.jpg.jpg" alt="Marina Bassem"></div>
+          <div class="floating-tag" style="right:-70px;top:20px;color:var(--blue-deep)">✦ 4+ years SaaS</div>
+          <div class="floating-tag" style="left:-80px;bottom:30px;color:var(--ink-60)">Cairo ↔ Remote</div>
+        </div>
+        <svg class="organic-line" width="200" height="90" viewBox="0 0 200 90"><path d="M 15 45 C 40 15 75 15 100 45 C 125 75 160 75 185 45" stroke="#7BB3DC" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M 30 68 C 50 52 68 52 86 68 C 104 84 122 84 140 68" stroke="#C8E0F8" stroke-width="1" fill="none" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee-section"><div class="marquee-track" id="marquee-track"></div></div>
+  <hr class="divider">
+
+<section class="section" id="process">
+    <div class="container">
+      <div style="text-align:center">
+        <div class="sec-label reveal" style="justify-content:center">Process</div>
+        <h2 class="sec-h2 reveal d1" style="text-align:center">Built to ship. <em>Designed to last.</em></h2>
+      </div>
+      <div class="process-grid">
+        <!-- Step 1 -->
+        <div class="process-card reveal d1">
+          <div class="process-num">01</div>
+          <div class="process-title">Research &amp; Define</div>
+          <div class="process-body">User interviews, competitor research, and AI-assisted insights to nail down the real problem.</div>
+        </div>
+        <!-- Step 2 -->
+        <div class="process-card reveal d2">
+          <div class="process-num">02</div>
+          <div class="process-title">Design &amp; Prototype</div>
+          <div class="process-body">Turning insights into high-fidelity wireframes, interactive prototypes, and scalable layout foundations.</div>
+        </div>
+        <!-- Step 3 -->
+        <div class="process-card reveal d3">
+          <div class="process-num">03</div>
+          <div class="process-title">Iterate &amp; Test</div>
+          <div class="process-body">Validating flows with real users, uncovering friction, and refining interfaces based on actual data.</div>
+        </div>
+        <!-- Step 4 -->
+        <div class="process-card reveal d4">
+          <div class="process-num">04</div>
+          <div class="process-title">Handoff &amp; Scale</div>
+          <div class="process-body">Delivering production-ready design systems, detailed component specs, and rigorous UAT testing.</div>
+        </div>
+      </div>
+      <!-- Updated Empowered Footer keeping your style and delay animation -->
+      <p class="process-footer reveal d5" style="text-align:center; font-style:italic; margin-top:40px;">
+        I don't just design screens—I design processes, handoffs, and systems that scale.
+      </p>
+    </div>
+  </section>
+  <hr class="divider">
+
+  <section class="section" id="work">
+    <div class="container">
+      <div style="margin-bottom:48px" class="reveal">
+        <div class="sec-label">Selected Work</div>
+        <h2 class="sec-h2">Projects that <em>ship.</em></h2>
+      </div>
+      <div class="work-card reveal d1">
+        <div class="work-card-left">
+          <div class="tags"><span class="tag tag-orange">B2B</span><span class="tag tag-orange">SaaS</span><span class="tag tag-orange">RTL</span><span class="tag tag-orange">Multi-platform</span></div>
+          <div class="work-title">Parent – Global Childcare Ecosystem</div>
+          <div class="work-role role-parent">Senior Product Designer · Finance, Report Builder, Design System, UAT</div>
+          <p class="work-detail"><strong>Designing for administrators, teachers, and parents - each with completely different needs. 12+ core modules across Canada, Europe &amp; the Middle East. 100+ local components, saving teams hundreds of hours.</strong></p>
+          <button class="btn-primary" style="margin-top:20px" onclick="showPage('parent')"><span>View case study →</span></button>
+        </div>
+        <div class="work-card-right"><img loading="lazy" src="/src/images/parent Caver.png" alt="Parent Platform"></div>
+      </div>
+      <div class="work-card reveal d2">
+        <div class="work-card-left">
+          <div class="tags"><span class="tag tag-teal">Accessibility</span><span class="tag tag-teal">Design System</span><span class="tag tag-teal">Mobile · Web</span></div>
+          <div class="work-title">Arise – Inclusive Social Platform</div>
+          <div class="work-role role-arise">Product Designer · Design system from scratch, accessibility, resource hub</div>
+          <p class="work-detail"><strong>A safe social home for people with disabilities - from research to UAT. 100+ components built from scratch. Voice-to-text, anti-bullying tools, and a full resource hub shipped end-to-end.</strong></p>
+          <button class="btn-primary" style="margin-top:20px" onclick="showPage('arise')"><span>View case study →</span></button>
+        </div>
+        <div class="work-card-right"><img loading="lazy" src="/src/images/Arise caver.png" alt="Arise Platform"></div>
+      </div>
+      <p style="text-align:center;font-size:13.5px;color:var(--ink-40);margin-top:8px" class="reveal">✦ +15 more projects across web and mobile apps</p>
+    </div>
+  </section>
+  <hr class="divider">
+
+  <section class="ds-section">
+    <div class="container">
+      <div style="text-align:center" class="reveal">
+        <div class="sec-label" style="justify-content:center">Design Systems</div>
+        <h2 class="sec-h2" style="text-align:center">Systems, <em>not just screens.</em></h2>
+        <p style="font-size:15px;color:var(--ink-60);max-width:560px;margin:14px auto 0;line-height:1.75">I build design systems from scratch and extend existing ones with local components. Consistency at scale.</p>
+      </div>
+      <div class="chips reveal d1"><span class="chip">Arise (from 0)</span><span class="chip">Parent (extended +100 local components)</span><span class="chip">Scrumptions (from 0)</span></div>
+      <div class="highlight reveal d2" style="max-width:740px;margin:0 auto 28px">"In Parent's Report Builder, I created 40+ local components so non-technical admins could build custom reports without touching code."</div>
+      <div class="card-image-side reveal d3"><img loading="lazy" src="/src/images/Design system.png" alt="Design System"></div>
+    </div>
+  </section>
+  <hr class="divider">
+
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="reveal-left">
+          <div class="sec-label">About</div>
+          <div class="about-h">Hi, I'm Marina.<br><em>But you can call me Mira.<span style="font-style: normal; display: inline-block;">✨</span></em></div>
+          <p class="about-p">I'm a Product Designer. I love solving problems that look impossible at first - the kind where users are frustrated and stakeholders are lost.</p>
+          <p class="about-p">I don't just design screens. I design processes, systems, and handoffs. I make sure developers have everything they need, and that users get something that actually works.</p>
+          <p class="about-p">When I'm not designing, I'm probably making handmade crafts - leather lamps, mixed media art - or reading about typography.</p>
+        </div>
+        <div class="about-right reveal-scale d2">
+          <div class="circle-image-container"><img loading="lazy" src="/src/images/Me.png" alt="Marina Bassem" class="crafted-image"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="dark-cta reveal">
+    <div class="dark-blob" style="width:300px;height:300px;top:-80px;right:-60px;background:rgba(74,142,200,.07)"></div>
+    <div class="dark-blob" style="width:200px;height:200px;bottom:-60px;left:-40px;background:rgba(74,142,200,.05)"></div>
+    <h2>Let's build something<br>great together.</h2>
+    <button class="btn-ghost" onclick="showPage('contact')">Get in touch →</button>
+  </div>
+</div><!-- /home -->
+
+
+<!-- ══════════════════════════════════
+     PAGE: PARENT OVERVIEW
+══════════════════════════════════ -->
+<div id="page-parent" class="page">
+  <div class="parent-hero">
+    <div class="parent-hero-inner">
+      <div>
+        <div class="breadcrumb"><button class="bc-btn" onclick="showPage('home')">Home</button> / Parent</div>
+        <div class="tags" style="margin-bottom:16px"><span class="tag tag-orange">Canada</span><span class="tag tag-orange">Europe</span><span class="tag tag-orange">UAE</span><span class="tag tag-orange">Middle East</span></div>
+        <h1 style="font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:400;color:var(--ink);margin-bottom:14px">Parent – Global Childcare Ecosystem</h1>
+        <p style="font-size:15.5px;color:var(--ink-60);line-height:1.7;margin-bottom:20px">An all-in-one cloud platform connecting nurseries, educators, and families. It covers everything from enrollment and billing to child development tracking. My role: Senior Product Designer with end-to-end ownership across 6 modules.</p>
+        <div class="tags"><span class="tag tag-blue">Nursery Admins</span><span class="tag tag-blue">Teachers</span><span class="tag tag-blue">Parents</span></div>
+      </div>
+      <div style="border-radius:var(--r-md);overflow:hidden;box-shadow:0 12px 48px rgba(74,142,200,.1)"><img loading="lazy" src="/src/images/parent Caver.png" style="width:100%;display:block" alt=""></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div style="margin-bottom:48px" class="reveal">
+        <div class="sec-label">6 Modules · End to End</div>
+        <h2 class="sec-h2">Select a module <em>to explore.</em></h2>
+      </div>
+      <div class="modules-grid">
+
+        <!-- 01 Report Builder -->
+        <div class="module-card reveal d1" onclick="showModule('report-builder')">
+          <div class="module-top">
+            <div class="module-icon-wrap">
+              <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+          </div>
+          <div class="module-title">Report Builder</div>
+          <div class="module-desc">No-code report builder for non-technical admins. Five entities, 40+ field types, live preview, export &amp; schedule.</div>
+          <button class="link-btn">Explore →</button>
+        </div>
+
+        <!-- 02 Schedule Plan -->
+        <div class="module-card reveal d2" onclick="showModule('schedule-plan')">
+          <div class="module-top">
+            <div class="module-icon-wrap">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+          </div>
+          <div class="module-title">Schedule Plan</div>
+          <div class="module-desc">Bulk plan creation for 500+ children. Bulk by default, flexible by exception, safe by design.</div>
+          <button class="link-btn">Explore →</button>
+        </div>
+
+        <!-- 03 Child Development -->
+        <div class="module-card reveal d3" onclick="showModule('child-development')">
+          <div class="module-top">
+            <div class="module-icon-wrap">
+              <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+          </div>
+          <div class="module-title">Child Development</div>
+          <div class="module-desc">Dashboard across 3 platforms, 2 languages. Zero empty states, instant insights, RTL Arabic.</div>
+          <button class="link-btn">Explore →</button>
+        </div>
+
+        <!-- 04 Invoice Automations -->
+        <div class="module-card reveal d4" onclick="showModule('invoice-automations')">
+          <div class="module-top">
+            <div class="module-icon-wrap">
+              <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </div>
+          </div>
+          <div class="module-title">Invoice Automations</div>
+          <div class="module-desc">Smart reminders, 6 billing cycles, full audit trail. The only module that shipped to production with customer feedback.</div>
+          <button class="link-btn">Explore →</button>
+        </div>
+
+        <!-- 05 Waitlist -->
+        <div class="module-card reveal d5" onclick="showModule('waitlist')">
+          <div class="module-top">
+            <div class="module-icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="module-title">Waitlist Management</div>
+          <div class="module-desc">Automated admissions pipeline. 48h response window, auto-enrollment, transparent parent portal.</div>
+          <button class="link-btn">Explore →</button>
+        </div>
+
+        <!-- 06 Global Search -->
+        <div class="module-card reveal d6" onclick="showModule('global-search')">
+          <div class="module-top">
+            <div class="module-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+          </div>
+          <div class="module-title">Global Search</div>
+          <div class="module-desc">One search bar for 7+ entities. Ctrl+K shortcuts, tabbed results, location-aware. 70% time saved.</div>
+          <button class="link-btn">Explore →</button>
+        </div>
+
+      </div>
+
+      <div class="outcome-dark reveal" style="margin-top:52px">
+        <div class="sec-label">Combined Impact</div>
+        <div class="stats-row">
+          <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Children in bulk plans</div></div>
+          <div class="stat-item"><div class="stat-num">70%</div><div class="stat-label">Search time saved</div></div>
+          <div class="stat-item"><div class="stat-num">40+</div><div class="stat-label">Local components</div></div>
+          <div class="stat-item"><div class="stat-num">✅</div><div class="stat-label">Customer feedback</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /parent -->
+
+
+<!-- ══════════════════════════════════
+     PAGE: ARISE
+══════════════════════════════════ -->
+<div id="page-arise" class="page">
+
+  <!-- HERO -->
+  <div class="cs-hero" style="background:var(--surface)">
+    <div class="cs-hero-inner">
+      <div>
+        <div class="breadcrumb"><button class="bc-btn" onclick="showPage('home')">Home</button> / Arise</div>
+        <div class="tags"><span class="tag tag-teal">Accessibility</span><span class="tag tag-teal">Social Platform</span><span class="tag tag-blue">Mobile · Web</span><span class="tag tag-lav">Anti-Bullying</span></div>
+        <h1 class="cs-h1">Arise<br><em>Beyond Disability</em></h1>
+        <p class="cs-sub">A safe, inclusive social ecosystem for people with disabilities. Built end-to-end, from the first user interview to developer handoff.</p>
+        <div class="cs-role">Product Designer · Dec 2024 – Aug 2025</div>
+        <div class="mini-stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:4px">
+          <div style="background:var(--blue-50);border:1px solid var(--border);border-radius:var(--r-md);padding:16px;text-align:center"><div style="font-family:var(--serif);font-size:1.8rem;font-weight:300;color:var(--blue-deep)">100+</div><div style="font-size:10.5px;color:var(--ink-40);text-transform:uppercase;letter-spacing:.07em;margin-top:3px">Components</div></div>
+          <div style="background:var(--blue-50);border:1px solid var(--border);border-radius:var(--r-md);padding:16px;text-align:center"><div style="font-family:var(--serif);font-size:1.8rem;font-weight:300;color:var(--blue-deep)">2</div><div style="font-size:10.5px;color:var(--ink-40);text-transform:uppercase;letter-spacing:.07em;margin-top:3px">Platforms</div></div>
+          <div style="background:var(--blue-50);border:1px solid var(--border);border-radius:var(--r-md);padding:16px;text-align:center"><div style="font-family:var(--serif);font-size:1.8rem;font-weight:300;color:var(--blue-deep)">6+</div><div style="font-size:10.5px;color:var(--ink-40);text-transform:uppercase;letter-spacing:.07em;margin-top:3px">Disability types</div></div>
+          <div style="background:var(--arise-teal-soft);border:1px solid rgba(27,122,140,.2);border-radius:var(--r-md);padding:16px;text-align:center"><div style="font-family:var(--serif);font-size:1.8rem;font-weight:300;color:var(--arise-teal)">✓</div><div style="font-size:10.5px;color:var(--arise-teal);text-transform:uppercase;letter-spacing:.07em;margin-top:3px;opacity:.7">UAT Done</div></div>
+        </div>
+      </div>
+      <div style="border-radius:var(--r-md);overflow:hidden"><img loading="lazy" src="/src/images/Arise case hero.png" style="width:100%;display:block" alt="Arise App"></div>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="sticky-sec"><span class="sticky-num">01</span><span class="sticky-title">Overview</span></div>
+  <div class="section">
+    <div class="container">
+      <div class="two-col two-col-center">
+        <div class="reveal-left">
+          <div class="sec-label">What is Arise?</div>
+          <h2 class="sec-h2">A digital home for those <em>who needed one.</em></h2>
+          <p style="font-size:15px;color:var(--ink-60);line-height:1.8;margin-bottom:14px">Arise is a pioneering social and professional network built for people with disabilities and their caregivers. It moves beyond traditional social media to create a "barrier-free" digital ecosystem where users can connect, find specialized resources, and access life-changing opportunities, all within an environment built on safety and mutual respect.</p>
+          <p style="font-size:15px;color:var(--ink-60);line-height:1.8;margin-bottom:14px">The platform pairs community building with a dedicated Resource Hub that gives users direct access to discounted medical supplies, life coaches, doctors, and an assistive device marketplace.</p>
+        </div>
+        <div class="reveal d2">
+          <div class="highlight" style="margin-bottom:24px">"Peter Wasif, a pharmacist from Egypt living in the US, lost his left arm in an accident at age 27. He struggled with depression, isolation, and bullying. He searched for a community and found none. So he built Arise."</div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px">
+            <div class="sec-label" style="margin-bottom:12px">My Activities</div>
+            <ul class="bullet-list">
+              <li>User Research &amp; Empathy Mapping</li>
+              <li>Accessibility Audit (voice-to-text, screen reader, RTL)</li>
+              <li>Information Architecture &amp; Design System</li>
+              <li>Stakeholder Management &amp; Safety decisions</li>
+              <li>UI Design &amp; Prototyping (Mobile + Web)</li>
+              <li>Usability Testing with real users with disabilities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="full-img reveal"><img loading="lazy" src="/src/images/Arise hero2.png" alt="Arise overview"></div>
+
+  <!-- PROBLEM -->
+  <div class="sticky-sec"><span class="sticky-num">02</span><span class="sticky-title">The Problem</span></div>
+  <div class="section" style="background:var(--surface)">
+    <div class="container">
+      <div class="sec-label reveal">Research Findings</div>
+      <h2 class="sec-h2 reveal d1" style="max-width:680px">People with disabilities feel <em>marginalized</em> on every platform that exists.</h2>
+      <p style="font-size:15px;color:var(--ink-60);max-width:640px;line-height:1.8;margin-top:12px" class="reveal d2">Through user research and empathy mapping, three critical pain points came up again and again, each one blocking real human connection for millions of people.</p>
+      <div class="pain-grid">
+        <div class="pain-card reveal d1"><div class="pain-num">01</div><div class="pain-title">Safety &amp; Bullying</div><div class="pain-body">High exposure to toxicity on mainstream platforms. Zero tools to handle digital harassment. People with disabilities are disproportionately targeted.</div></div>
+        <div class="pain-card reveal d2"><div class="pain-num">02</div><div class="pain-title">Financial Burden</div><div class="pain-body">High costs of medications and assistive tools with no easy access to discounts or verified alternatives. No centralized marketplace for essential resources.</div></div>
+        <div class="pain-card reveal d3"><div class="pain-num">03</div><div class="pain-title">Communication Barriers</div><div class="pain-body">Traditional interfaces rely heavily on typing and reading, which shuts out users with motor, visual, or hearing impairments from full participation.</div></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- DESIGN SYSTEM -->
+  <div class="sticky-sec"><span class="sticky-num">03</span><span class="sticky-title">Design System</span></div>
+  <div class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="reveal-left">
+          <div class="sec-label">Built from scratch</div>
+          <h2 class="sec-h2">100+ components.<br><em>One language.</em></h2>
+          <p style="font-size:15px;color:var(--ink-60);line-height:1.8;margin-bottom:16px">Every component was designed accessibility-first: large touch targets, screen reader annotations, high contrast modes, and LTR/RTL support baked in from day one.</p>
+          <div class="highlight" style="max-width:100%;margin:0">"Accessibility is not an add-on. Every component was built for it, from the first sketch to the final spec."</div>
+          <ul class="bullet-list" style="margin-top:20px">
+            <li>Min touch target 44×44px on every interactive element</li>
+            <li>WCAG AA contrast ratio across all text</li>
+            <li>Voice-to-text microphone on all inputs</li>
+            <li>Full RTL mirror layout for Arabic users</li>
+            <li>Screen reader labels on every icon</li>
+          </ul>
+        </div>
+        <div class="reveal d2">
+          <div class="sec-label" style="margin-bottom:14px">Color System</div>
+          <div class="swatch-row">
+            <div class="swatch"><div class="swatch-color" style="background:#092E40"></div><div class="swatch-name">Dark Blue</div><div class="swatch-hex">#092E40</div></div>
+            <div class="swatch"><div class="swatch-color" style="background:#FF671D"></div><div class="swatch-name">Orange</div><div class="swatch-hex">#FF671D</div></div>
+            <div class="swatch"><div class="swatch-color" style="background:#E9F1F3"></div><div class="swatch-name">Blue Light</div><div class="swatch-hex">#E9F1F3</div></div>
+            <div class="swatch"><div class="swatch-color" style="background:#DEFE8F"></div><div class="swatch-name">Green Light</div><div class="swatch-hex">#DEFE8F</div></div>
+            <div class="swatch"><div class="swatch-color" style="background:#EB5050"></div><div class="swatch-name">Red</div><div class="swatch-hex">#EB5050</div></div>
+          </div>
+          <div class="sec-label" style="margin:20px 0 14px">Typography</div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:20px">
+            <div style="font-size:28px;font-weight:700;color:var(--ink);margin-bottom:6px">Nexa</div>
+            <div style="font-size:12px;color:var(--ink-40)">Display — Regular · Medium · SemiBold · Bold</div>
+            <div style="margin-top:14px;font-size:20px;font-weight:400;color:var(--ink)">Boomer</div>
+            <div style="font-size:12px;color:var(--ink-40)">Body — Regular · Medium · SemiBold · Bold</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="screens-side reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:0 52px 64px">
+      </div>
+
+  <!-- ONBOARDING -->
+  <div class="sticky-sec"><span class="sticky-num">04</span><span class="sticky-title">Onboarding Experience</span></div>
+  <div class="feat-row feat-row-bg">
+    <div class="feat-text reveal-left">
+      <div class="feat-tag">First Impression</div>
+      <h3 class="feat-h">Four screens.<br><em>Everything a user needs to know.</em></h3>
+      <p class="feat-body">Each onboarding card introduces one core value: Join Safe Communities → Ask Consultants → Learn About Disability → Fight Anti-Bullying. Simple illustrations, clear language, Skip always visible.</p>
+      <p class="feat-body">The progression is deliberate. It builds trust before asking for any personal information.</p>
+      <div class="feat-detail">Design decision: The "Skip" option is always visible and never shamed. Respecting autonomy from the very first screen.</div>
+    </div>
+    <div class="feat-img reveal d2"><img loading="lazy" src="/src/images/Onboarding.png" alt="Onboarding screens"></div>
+  </div>
+
+  <!-- AUTH -->
+  <div class="sticky-sec"><span class="sticky-num">05</span><span class="sticky-title">Authentication Flow</span></div>
+  <div class="feat-row rev">
+    <div class="feat-img reveal-left"><img loading="lazy" src="/src/images/Login and Sign Up screens.png" alt="Login and Sign Up screens"></div>
+    <div class="feat-text reveal d2">
+      <div class="feat-tag">Sign Up · Login</div>
+      <h3 class="feat-h">Accessible from <em>the very first tap.</em></h3>
+      <p class="feat-body">Biometric login (Face ID / fingerprint) is offered first - for many users with motor impairments, typing a password is genuinely hard. Social login via Google and Facebook reduces the typing burden further.</p>
+      <p class="feat-body">The sign-up form collects only what's necessary. Optional fields are clearly marked. The welcome screen confirms identity warmly: "Your answers help us give you the best experience."</p>
+      <div class="feat-detail">The multi-step flow reduces cognitive load per screen - each step feels manageable, not overwhelming.</div>
+    </div>
+  </div>
+  <div class="feat-row feat-row-bg">
+    <div class="feat-text reveal-left">
+      <div class="feat-tag">Disability Profile · Optional</div>
+      <h3 class="feat-h">Tell us about yourself. <em>Your way.</em></h3>
+      <p class="feat-body">After basic sign-up, users can optionally share their disability type and preferences. This personalizes the experience (recommending relevant groups, resources, and consultants), but it's never required or intrusive.</p>
+      <p class="feat-body">Voice input is available on every field. Progress indicators are subtle, never pressure-inducing.</p>
+    </div>
+    <div class="feat-img reveal d2"><img loading="lazy" src="/src/images/Disability profile screens.png" alt="Disability profile screens"></div>
+  </div>
+
+  <!-- COMMUNITY -->
+  <div class="sticky-sec"><span class="sticky-num">06</span><span class="sticky-title">Community Feed</span></div>
+  <div class="feat-row rev">
+    <div class="feat-img reveal-left"><img loading="lazy" src="/src/images/Community feed.png" alt="Community feed"></div>
+    <div class="feat-text reveal d2">
+      <div class="feat-tag">Community · Home Feed</div>
+      <h3 class="feat-h">Access essential support <em>instantly.</em></h3>
+      <p class="feat-body">The home feed puts community front and center - stories, posts, group recommendations, and a voice-enabled post box. Everything a user needs to connect is one tap away.</p>
+      <p class="feat-body">The "Create New" bottom sheet gives six clear options - Post, Question, Group, Event, Video, Poll - reducing decision fatigue with icons and short labels. The microphone on the post input is a core accessibility decision.</p>
+      <div class="feat-detail">With one click, users share achievements and connect with a safe, supportive community designed to foster growth and eliminate digital bullying.</div>
+    </div>
+  </div>
+
+  <!-- GROUPS -->
+  <div class="sticky-sec"><span class="sticky-num">07</span><span class="sticky-title">Groups</span></div>
+  <div class="feat-row feat-row-bg">
+    <div class="feat-text reveal-left">
+      <div class="feat-tag">Mobile · Web · Groups</div>
+      <h3 class="feat-h">Keep in touch with <em>your groups.</em></h3>
+      <p class="feat-body">Users discover groups by interest or disability type, join with one tap, and participate in real-time discussions. The web version shows a rich "Discover Groups" layout with thumbnails and member counts.</p>
+      <p class="feat-body">The mobile group detail page shows full activity, member roster, and quick actions (Audio Call, Video Call, Invite People). The "Report Group" option is visible but not shoved in your face. Safety is built in, not hidden.</p>
+      <div class="feat-detail">Join various groups based on your interests and needs. Whether you're looking for support, advice, or friendship, there's a group for you.</div>
+    </div>
+    <div class="feat-img reveal d2"><img loading="lazy" src="/src/images/Groups mobile and web.png" alt="Groups on mobile and web"></div>
+  </div>
+
+  <!-- CHAT -->
+  <div class="sticky-sec"><span class="sticky-num">08</span><span class="sticky-title">Chat</span></div>
+  <div class="feat-row rev">
+    <div class="feat-img reveal-left"><img loading="lazy" src="/src/images/Chat screens.png" alt="Chat screens"></div>
+    <div class="feat-text reveal d2">
+      <div class="feat-tag">Private &amp; Group Chat</div>
+      <h3 class="feat-h">Say what you feel. <em>Your way.</em></h3>
+      <p class="feat-body">Private messages and group chats are real-time, accessible, and warm. The mobile list view is clean: avatar, name, last message preview, and unread count. The desktop view opens a full conversation with emoji reactions, voice messages, and accessibility shortcuts.</p>
+      <p class="feat-body">Emoji reactions reduce the need to type full responses, which matters a lot for users with motor impairments. The chat filter (All / Unread / Groups) reduces visual noise.</p>
+      <div class="feat-detail">Safety decision: "Report Message" is visible at 3 taps, not buried in settings. Reporting should never feel hard.</div>
+    </div>
+  </div>
+
+  <!-- STORIES -->
+  <div class="sticky-sec"><span class="sticky-num">09</span><span class="sticky-title">Stories &amp; Moments</span></div>
+  <div class="feat-row feat-row-bg">
+    <div class="feat-text reveal-left">
+      <div class="feat-tag">Stories · Posts · Voice</div>
+      <h3 class="feat-h">Share your special <em>moments.</em></h3>
+      <p class="feat-body">Stories let users share their journey and achievements in a familiar format, with accessibility baked in. Full-screen stories auto-advance but pause on tap. Voice narration can accompany any story.</p>
+      <p class="feat-body">The "Share your feeling" creation flow starts with a voice-first prompt: "How do you feel?" This brings the typing barrier down to zero. The story viewer includes a direct message button with immediate visible confirmation.</p>
+    </div>
+    <div class="feat-img reveal d2"><img loading="lazy" src="/src/images/Stories and moments.png" alt="Stories and moments"></div>
+  </div>
+
+  <!-- EVENTS -->
+  <div class="sticky-sec"><span class="sticky-num">10</span><span class="sticky-title">Events</span></div>
+  <div class="feat-row rev">
+    <div class="feat-img reveal-left"><img loading="lazy" src="/src/images/Events screens.png" alt="Events screens"></div>
+    <div class="feat-text reveal d2">
+      <div class="feat-tag">Events · Web &amp; Mobile</div>
+      <h3 class="feat-h">Never miss <em>what matters.</em></h3>
+      <p class="feat-body">Events are organized by "All Events," "Events for You," and "Groups' Events," so personalized discovery is effortless. Each event detail page shows speakers, organizers, attendee count, and a clear "Interested / Going" RSVP flow.</p>
+      <div class="feat-detail">Accessibility insight: The "Nearby Events" tab matters a lot here. Many users with disabilities have transport constraints, so local events are often the only realistic option.</div>
+    </div>
+  </div>
+
+  <!-- RESOURCE HUB -->
+  <div class="sticky-sec"><span class="sticky-num">11</span><span class="sticky-title">Resource Hub</span></div>
+  <div class="feat-row feat-row-bg">
+    <div class="feat-text reveal-left">
+      <div class="feat-tag">Consultants · Reviews</div>
+      <h3 class="feat-h">Share your experience. <em>Help others choose.</em></h3>
+      <p class="feat-body">Verified consultants, life coaches, and medical professionals. Each profile shows specialization, an About section, and community reviews.</p>
+      <p class="feat-body">The review flow is deliberately simple: "Is it helpful for you?" Just a star rating and a short text field. Confirmation is warm and immediate. Real community reviews appear directly on the profile card.</p>
+      <div class="feat-detail">Safety decision: Verified professional badges were a must. Users needed to trust they were talking to real experts, not random accounts.</div>
+    </div>
+    <div class="feat-img reveal d2"><img loading="lazy" src="/src/images/Resource hub and reviews.png" alt="Resource hub and reviews"></div>
+  </div>
+
+  <!-- KEY DECISIONS -->
+  <div class="sticky-sec"><span class="sticky-num">12</span><span class="sticky-title">Key Design Decisions</span></div>
+  <div class="section">
+    <div class="container">
+      <div class="sec-label reveal">How I solved it</div>
+      <h2 class="sec-h2 reveal d1">Three decisions that <em>defined the product.</em></h2>
+      <div class="dec-grid">
+        <div class="dec-card reveal d1"><div class="dec-num">01</div><div class="dec-title">Safety is the foundation, not a feature</div><div class="dec-body">Anti-bullying tools, report flows, and moderation options are built into every surface, not buried in settings. Reporting a post is 2 taps. Leaving a group is visible but never shamed.</div></div>
+        <div class="dec-card reveal d2"><div class="dec-num">02</div><div class="dec-title">Voice before typing, everywhere</div><div class="dec-body">Every text input has a microphone button. The post composer starts with "How do you feel?" as a voice prompt. Voice-to-text is a core interaction pattern, not an accessibility add-on.</div></div>
+        <div class="dec-card reveal d3"><div class="dec-num">03</div><div class="dec-title">Caregiver integration, not isolation</div><div class="dec-body">Caregivers are full members of the community. They access the same Resource Hub, join the same groups, and attend the same events. Disability affects families, not just individuals.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OUTCOME -->
+  <div class="section" style="padding-top:0">
+    <div class="container">
+      <div class="outcome-dark reveal">
+        <div class="sec-label">Outcome</div>
+        <div class="stats-row">
+          <div class="stat-item"><div class="stat-num">100+</div><div class="stat-label">Components built</div></div>
+          <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">Platforms</div></div>
+          <div class="stat-item"><div class="stat-num">6+</div><div class="stat-label">Disability types</div></div>
+          <div class="stat-item"><div class="stat-num">✓</div><div class="stat-label">UAT complete</div></div>
+        </div>
+        <p class="outcome-quote">"Safety isn't a feature. It's the foundation everything else is built on."</p>
+      </div>
+      <div class="uat-block reveal">
+        <div class="sec-label" style="justify-content:center">UAT &amp; Handoff</div>
+        <p class="uat-text">Tested with real users with disabilities across multiple sessions. Handoff included component specs, responsive breakpoints, accessibility annotations (ARIA labels, focus order, contrast ratios), and RTL CSS for every component.</p>
+      </div>
+      <div class="case-nav">
+        <button class="case-nav-btn" onclick="showPage('home')">← Back to Portfolio</button>
+        <button class="case-nav-btn" onclick="showPage('parent')">Parent Case Study →</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /arise -->
+
+
+<!-- ══════════════════════════════════
+     PAGE: MODULE DETAIL (dynamic)
+══════════════════════════════════ -->
+<div id="page-module" class="page">
+  <div id="module-content"></div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     PAGE: CONTACT
+══════════════════════════════════ -->
+<div id="page-contact" class="page">
+  <div class="contact-inner">
+    <div class="reveal-left">
+      <div class="sec-label">Contact</div>
+      <h2 class="contact-h">Let's work<br>together.</h2>
+      <p class="contact-sub">Open to full-time roles &amp; remote opportunities.</p>
+      <div class="contact-info">
+        <div><div class="contact-label">Email</div><div class="contact-value"><a href="mailto:marinabassem.021@gmail.com">marinabassem.021@gmail.com</a></div></div>
+        <div><div class="contact-label">LinkedIn</div><div class="contact-value"><a href="https://www.linkedin.com/in/marina-bassem-017465227/" target="_blank">linkedin.com/in/marina-bassem</a></div></div>
+        <div><div class="contact-label">Behance</div><div class="contact-value"><a href="https://www.behance.net/marinabassem2" target="_blank">behance.net/marinabassem2</a></div></div>
+        <div><div class="contact-label">Location</div><div class="contact-value">Cairo, Egypt · Open to remote &amp; relocation</div></div>
+      </div>
+    </div>
+    <div class="reveal d2">
+      <div class="form-card">
+        <h3 class="form-h">Send a message</h3>
+        <div class="form-group"><label class="form-label" for="contact-name">Name</label><input id="contact-name" type="text" class="form-input" placeholder="Your name" autocomplete="name"></div>
+        <div class="form-group"><label class="form-label" for="contact-email">Email</label><input id="contact-email" type="email" class="form-input" placeholder="your@email.com" autocomplete="email"></div>
+        <div class="form-group"><label class="form-label" for="contact-message">Message</label><textarea id="contact-message" class="form-textarea" rows="5" placeholder="Tell me about your project…"></textarea></div>
+        <button class="btn-primary" style="width:100%"><span>Send message →</span></button>
+        <p class="form-hint">I typically respond within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><p>Marina Bassem</p><span>Senior Product Designer · Cairo, Egypt</span></div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <p>Navigate</p>
+          <button onclick="scrollToWork()">Work</button>
+          <button onclick="scrollToProcess()">Process</button>
+          <button onclick="showPage('contact')">Contact</button>
+        </div>
+        <div class="footer-col">
+          <p>Connect</p>
+          <a href="https://www.linkedin.com/in/marina-bassem-017465227/" target="_blank">LinkedIn</a>
+          <a href="https://www.behance.net/marinabassem2" target="_blank">Behance</a>
+          <a href="mailto:marinabassem.021@gmail.com">Email</a>
+        </div>
+        <div class="footer-col">
+          <p>Case Studies</p>
+          <button onclick="showPage('parent')">Parent</button>
+          <button onclick="showPage('arise')">Arise</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 Marina Bassem. Designed with care in Cairo.</div>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
