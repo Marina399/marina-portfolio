@@ -164,12 +164,12 @@ const modules={
     subtitle:'Giving non-technical admins the power of a data analyst, without making them feel like one.',
     role:'Senior Product Designer . End-to-end ownership',
     duration:'',
-    heroImg:'/src/images/Report-Builder-final-UI.png.png',
+    heroImg:'./src/images/Report-Builder-final-UI.png.png',
     tags:['40+ local components','5 data entities','Export & recurring','Live preview'],
     tagStyle:'tag-orange',
     problem:'Nursery admins needed custom reports daily but had no way to build them without technical help. Every new report request meant writing SQL queries and building a new UI, blocking developers. Users exported from 5 separate entities (Children, Contacts, Staff, Finance, Schedule) and merged manually in Excel. It was slow, error-prone, and the data was never current.',
     question:'"How do you give a nursery admin the power of a data analyst, without making them feel like one?"',
-    problemImg: '/src/images/rb-Challenge.png', 
+    problemImg: './src/images/rb-Challenge.png', 
     myRole:['End-to-end ownership: research, design, prototyping, handoff, UAT','Built 40+ local components for different data types (text, number, date, select, multi-select)','Collaborated with backend engineers to define filter logic and export formats','Conducted UAT sessions with nursery admins to validate usability'],
     decisions:[
       {num:'01',title:'Warn, don\'t block',body:'If a report is missing data or a filter is invalid, show a warning but let the user continue. Never discard their work.'},
@@ -177,9 +177,9 @@ const modules={
       {num:'03',title:'40+ local components',body:'Built custom input components for each data type, each with validation, error states, and consistent styling. The builder feels native, not like a generic form.'}
     ],
     flow:[
-      {label:'Choose data entity', desc:'Select from Children, Contacts, Staff, Finance, or Schedule.', img:'/src/images/rb-step1.png.png'},
-      {label:'Add filters & columns',desc:'Pick fields, set conditions (equals, contains, greater than, etc.).',img:'/src/images/rb-step2.png.png'},
-      {label:'Preview, export or schedule',desc:'See the table live. Export to CSV/Excel/PDF or save as a recurring report.',img:'/src/images/rb-step3.png.png'}
+      {label:'Choose data entity', desc:'Select from Children, Contacts, Staff, Finance, or Schedule.', img:'./src/images/rb-step1.png.png'},
+      {label:'Add filters & columns',desc:'Pick fields, set conditions (equals, contains, greater than, etc.).',img:'./src/images/rb-step2.png.png'},
+      {label:'Preview, export or schedule',desc:'See the table live. Export to CSV/Excel/PDF or save as a recurring report.',img:'./src/images/rb-step3.png.png'}
     ],
     stats:[{num:'40+',label:'Local components'},{num:'5',label:'Data entities'},{num:'0',label:'Developer requests'},{num:'∞',label:'Report variations'}],
     outcome:'No more Excel merging. Admins build their own reports in minutes. Developer requests for custom reports dropped to zero. Reports can be exported on demand or scheduled to run automatically, weekly, monthly, or per entity.',
@@ -192,11 +192,11 @@ const modules={
     subtitle:'From hours of manual work to minutes of bulk planning. One plan for hundreds of children.',
     role:'Senior Product Designer – End-to-end ownership',
     duration:'15 Days',
-    heroImg:'/src/images/SP Hero.png',
+    heroImg:'./src/images/SP Hero.png',
     tags:['500 children','+500 payers','Split payments','Canada & Middle East'],
     tagStyle:'tag-orange',
     problem:'Teachers monthly created a full plan for each child +20 children meant 20 separate plans with sessions, items, and billing details. Manual entry for each payer, discount, and subsidy per child. No flexibility for split payments or edge cases. No scalable solution.',
-    problemImg: '/src/images/SP-Problem.png', 
+    problemImg: './src/images/SP-Problem.png', 
     question:'"How do you design a system that\'s bulk by default but flexible by exception?"',
     myRole:['Led design from stakeholder alignment to developer handoff','Mapped edge cases: missing payers, split payments (Canada vs. Middle East), per-child overrides','Designed the bulk assignment interface and warning system','Coordinated UAT with teachers and finance admins from both regions'],
     decisions:[
@@ -205,10 +205,10 @@ const modules={
       {num:'03',title:'Override without breaking',body:'Editing one child\'s plan (e.g. custom payers or discounts) never affects the rest of the bulk. Group logic and individual logic are completely separated.'}
     ],
     flow:[
-      {label:'Setup & Build Your Plan',desc:'Define dates, pricing group, sessions, items, taxes.',img:'/src/images/SP-step1.png'},
-      {label:'Assign Children & Payers',desc:'Bulk assign to a room, then customize exceptions. 500 children, 400 payers at a glance.',img:'/src/images/SP-step2.png'},
-      {label:'Customize Payers',desc:'Edit individual payer splits per child (percentage or session-based). Override without breaking the bulk plan.',img:'/src/images/SP-step3.png'},
-      {label:'Review & Generate',desc:'Handle edge cases. Generate all plans in minutes.',img:'/src/images/SP-step4.png'}
+      {label:'Setup & Build Your Plan',desc:'Define dates, pricing group, sessions, items, taxes.',img:'./src/images/SP-step1.png'},
+      {label:'Assign Children & Payers',desc:'Bulk assign to a room, then customize exceptions. 500 children, 400 payers at a glance.',img:'./src/images/SP-step2.png'},
+      {label:'Customize Payers',desc:'Edit individual payer splits per child (percentage or session-based). Override without breaking the bulk plan.',img:'./src/images/SP-step3.png'},
+      {label:'Review & Generate',desc:'Handle edge cases. Generate all plans in minutes.',img:'./src/images/SP-step4.png'}
     ],
     stats:[{num:'500+',label:'Children in under 10 min'},{num:'500+',label:'Payers handled'},{num:'15+',label:'Hours saved per week'},{num:'2',label:'Regions supported'}],
     outcome:'500 children\'s plans created in under 10 minutes. Teachers save 15+ hours per week. Works seamlessly across Canada (session/item split) and Middle East (percentage split) billing models.',
@@ -221,11 +221,11 @@ const modules={
     subtitle:'Complex child progress data, made simple across every device and language.',
     role:'Senior Product Designer . End-to-end ownership',
     duration:'',
-    heroImg:'/src/images/cd-hero.png',
+    heroImg:'./src/images/cd-hero.png',
     tags:['3 platforms','RTL Arabic','16+ columns','2 new features'],
     tagStyle:'tag-orange',
     problem:'Empty tables on arrival. Users had to manually configure filters just to see any data. 16+ columns in the progress report table, impossible to scan. Desktop-only design on a platform used by teachers on tablets and parents on mobile.',
-    problemImg:'/src/images/cd-problem.png',
+    problemImg:'./src/images/cd-problem.png',
     question:'"How do you make a teacher instantly see which child needs attention, without touching a single filter?"',
     myRole:['Full redesign for 3 platforms (desktop, tablet, mobile)','Added 2 new features: bulk approve observations + activity log','Designed cascading filters (Curriculum → Areas → Subareas)','Implemented full RTL mirror layout for Arabic users'],
     decisions:[
@@ -234,9 +234,9 @@ const modules={
       {num:'03',title:'RTL mirroring',body:'Full layout reversal for Arabic: tables, buttons, icons, and navigation all flipped correctly. Not just text direction. The entire spatial logic.'}
     ],
     flow:[
-      {label:'Observations & Assessments',desc:'See Ahead, Behind, On track for the whole class at a glance.',img:'/src/images/cd-step2.png'},
-      {label:'Advanced filter bar',desc:'Refine by curriculum, area, subarea, date range, child name.',img:'/src/images/cd-step3.png'},
-      {label:'Detailed table + export',desc:'Show/hide 16+ columns, bulk approve, export or log.',img:'/src/images/cd-step4.png'}
+      {label:'Observations & Assessments',desc:'See Ahead, Behind, On track for the whole class at a glance.',img:'./src/images/cd-step2.png'},
+      {label:'Advanced filter bar',desc:'Refine by curriculum, area, subarea, date range, child name.',img:'./src/images/cd-step3.png'},
+      {label:'Detailed table + export',desc:'Show/hide 16+ columns, bulk approve, export or log.',img:'./src/images/cd-step4.png'}
     ],
     stats:[{num:'3',label:'Platforms'},{num:'2',label:'Languages (LTR + RTL)'},{num:'2',label:'New features added'},{num:'0',label:'Empty states on load'}],
     outcome:'Teachers see at-risk children in 2 seconds without clicking a single filter. Bulk approve observations in one click. Activity log tracks every change automatically.',
@@ -249,11 +249,11 @@ const modules={
     subtitle:'Automated payment reminders and recurring billing , built for complex childcare billing scenarios.',
     role:'Senior Product Designer . End-to-end ownership',
     duration:'',
-    heroImg:'/src/images/Invoice Automations (1).png',
+    heroImg:'./src/images/Invoice Automations (1).png',
     tags:['6 billing cycles','Smart reminders','Full audit trail','Shipped to production'],
     tagStyle:'tag-sage',
     problem:'Every payment reminder was manual. Admins personally contacted parents for every invoice cycle. No automation existed. Term-based, twice-per-month, and custom-day billing had no structured solution. Zero audit trail.',
-    problemImg: '/src/images/Invoice Automations (2).png', 
+    problemImg: './src/images/Invoice Automations (2).png', 
     question:'"How do you automate billing across multiple payment cultures , without losing flexibility or accountability?"',
     myRole:['Owned the full product cycle: research → design → handoff → UAT → production → customer feedback','Designed smart reminder rules (before due, on due, after overdue)','Created the recurring logic engine interface','Built the audit trail view with timestamp and user logging'],
     decisions:[
@@ -262,9 +262,9 @@ const modules={
       {num:'03',title:'Full audit trail',body:'Every reminder sent, every payment received, every setting change: all logged with a timestamp and user account. Full accountability.'}
     ],
     flow:[
-      {label:'Select billing cycle',desc:'Choose from 6 presets or create a custom cycle.',img:'/src/images/Invoice Automations (3).png'},
-      {label:'Set reminder schedule',desc:'Define when to send and to whom (primary payer, secondary, both).',img:'/src/images/Invoice Automations (4).png'},
-      {label:'Review & activate',desc:'See a live preview, then activate. Editable anytime.',img:'/src/images/Invoice Automations (5).png'}
+      {label:'Select billing cycle',desc:'Choose from 6 presets or create a custom cycle.',img:'./src/images/Invoice Automations (3).png'},
+      {label:'Set reminder schedule',desc:'Define when to send and to whom (primary payer, secondary, both).',img:'./src/images/Invoice Automations (4).png'},
+      {label:'Review & activate',desc:'See a live preview, then activate. Editable anytime.',img:'./src/images/Invoice Automations (5).png'}
     ],
     stats:[{num:'6',label:'Billing cycles supported'},{num:'500+',label:'Parents notified weekly'},{num:'20+',label:'Hours saved per month'},{num:'✅',label:'Customer feedback'}],
     outcome:'Admins save 20+ hours per month. The only module that completed the full product cycle: handoff → UAT → production → customer feedback with zero critical bugs.',
@@ -277,11 +277,11 @@ const modules={
     subtitle:'A flexible, fair admissions pipeline with custom priorities, bulk actions, and personalised table views - from first inquiry to enrolled.',
     role:'Senior Product Designer – End-to-end ownership',
     duration:'',
-    heroImg:'/src/images/WaitList.png',
+    heroImg:'./src/images/WaitList.png',
     tags:['Auto-enrollment','Priority management','Real-time updates','Nursery admissions'],
     tagStyle:'tag-orange',
     problem:'Waitlists were messy and unfair. Nurseries used first‑come, first‑served FIFO ordering – a child with an enrolled sibling or urgent need had no way to jump the queue. Every staff member saw the same rigid table (too many columns for some, not enough for others). Manual work multiplied when dozens of children needed the same priority assignment',
-    problemImg:'/src/images/WaitList (2).png',
+    problemImg:'./src/images/WaitList (2).png',
     question:'“How do you turn a basic waitlist into a transparent, rule‑based system where every nursery can define its own priorities, and every user can see only the data they need?”',
     myRole:['Redesigned the waitlist module end‑to‑end','Built priority management from scratch (rules, colours, drag‑drop)','Added customisable columns for every user','Enabled bulk priority assignment in seconds','Polished UI (table, tabs, search, filters) for clarity and speed'],
     decisions:[
@@ -290,9 +290,9 @@ const modules={
       {num:'03',title:'Bulk Actions',body:'Instead of opening each child’s profile, staff select multiple inquiries and assign a priority in one click. Bulk actions also support status changes and mass messaging, saving hours every week.'}
     ],
     flow:[
-      {label:'Apply & join waitlist',desc:'Parent applies online, automatically added with timestamp and desired start date.',img:'/src/images/WaitList (3).png'},
-      {label:'Spot opens: 48h window',desc:'System notifies the next family. 48 hours to accept or the spot moves on.',img:'/src/images/WaitList (4).png'},
-      {label:'Accept or pass',desc:'Auto-enroll if accepted. Auto-move if declined or timeout.',img:'/src/images/WaitList (5).png'}
+      {label:'Apply & join waitlist',desc:'Parent applies online, automatically added with timestamp and desired start date.',img:'./src/images/WaitList (3).png'},
+      {label:'Spot opens: 48h window',desc:'System notifies the next family. 48 hours to accept or the spot moves on.',img:'./src/images/WaitList (4).png'},
+      {label:'Accept or pass',desc:'Auto-enroll if accepted. Auto-move if declined or timeout.',img:'./src/images/WaitList (5).png'}
     ],
     stats:[{num:'15+',label:'Admin hours saved/week'},{num:'3x',label:'Faster enrollment'},{num:'48h',label:'Response window'},{num:'80%',label:'Less time per child'}],
     outcome:'Admissions teams save 15+ hours per week. Parents always know where they stand. Nurseries fill open spots 3x faster than before.',
@@ -305,11 +305,11 @@ const modules={
     subtitle:'One search bar. Every entity. Instant results across the entire platform.',
     role:'Senior Product Designer – End-to-end ownership',
     duration:'',
-    heroImg:'/src/images/Global Search.png',
+    heroImg:'./src/images/Global Search.png',
     tags:['Cross-entity search','Keyboard shortcuts','Location switch','70% time saved'],
     tagStyle:'tag-orange',
     problem:'7+ entities (Children, Payers, Staff, Billing, Rooms, Inquiries, Documents), each with its own search. Users had to know exactly where to look. No shortcuts for power users. Finding a child\'s invoice or a staff member\'s schedule meant jumping between modules. Time wasted, context lost.',
-    problemImg:'/src/images/Global Search (2).png',
+    problemImg:'./src/images/Global Search (2).png',
     question:'"How do you let users find anything (a child, a payment, a room, an inquiry) from one place, in seconds?"',
     myRole:['Designed the global search entry point and results page','Defined result ranking algorithm (priority to exact matches, recent activity)','Added keyboard shortcuts (Ctrl+K / Cmd+K) and location-aware switching','Worked with backend to unify search across 7 entities'],
     decisions:[
@@ -318,9 +318,9 @@ const modules={
       {num:'03',title:'Location-aware',body:'Search includes current nursery location. One-click to switch locations and see cross-site results, which is critical for multi-site organizations.'}
     ],
     flow:[
-      {label:'Type anywhere',desc:'Autocomplete shows top 3 matches per entity as you type.',img:'/src/images/Global Search (3).png'},
-      {label:'Results grouped by entity',desc:'Hit Enter to see full results with previews (age, invoice amount, room details).',img:'/src/images/Global Search (4).png'},
-      {label:'Jump directly',desc:'Click any result to go directly to that record.',img:'/src/images/Global Search (5).png'}
+      {label:'Type anywhere',desc:'Autocomplete shows top 3 matches per entity as you type.',img:'./src/images/Global Search (3).png'},
+      {label:'Results grouped by entity',desc:'Hit Enter to see full results with previews (age, invoice amount, room details).',img:'./src/images/Global Search (4).png'},
+      {label:'Jump directly',desc:'Click any result to go directly to that record.',img:'./src/images/Global Search (5).png'}
     ],
     stats:[{num:'70%',label:'Search time reduced'},{num:'85%',label:'Keyboard shortcut adoption'},{num:'10+',label:'Admin hours saved/week'},{num:'7+',label:'Entities unified'}],
     outcome:'Search time reduced by 70%. Admins save 10+ hours per week. Keyboard shortcuts adopted by 85% of daily users within 2 weeks of launch.',
