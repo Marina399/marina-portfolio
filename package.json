@@ -1,0 +1,12 @@
+{
+  "name": "marina-portfolio",
+  "version": "1.0.0",
+  "description": "Marina Bassem - Product Designer Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "build": "echo 'No build step required' && exit 0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
